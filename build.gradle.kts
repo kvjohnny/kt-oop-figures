@@ -31,5 +31,5 @@ detekt {
     buildUponDefaultConfig = true // preconfigure defaults
     allRules = false // activate all available (even unstable) rules.
     baseline = file("$projectDir/config/baseline.xml") // a way of suppressing issues before introducing detekt
-    config = files("$projectDir/config/detekt-config.yml") // allow to skip some style checks
+    config.setFrom(files("$projectDir/config/detekt-config.yml")) // allow to skip some style checks
 }
