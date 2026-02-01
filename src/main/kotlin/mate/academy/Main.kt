@@ -11,6 +11,6 @@ fun main() {
     for (i in 0 until SIZE_ARRAY_OF_FIGURES) {
         if (i < SIZE_ARRAY_OF_FIGURES.div(DIVISOR)) arrayOfFigures[i] = figureSupplier.getRandomFigure()
         else arrayOfFigures[i] = figureSupplier.getDefaultFigure()
-        arrayOfFigures[i]?.draw()
     }
+    for (i in 0 until SIZE_ARRAY_OF_FIGURES) arrayOfFigures[i]?.draw()
 }
