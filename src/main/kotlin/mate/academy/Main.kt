@@ -7,10 +7,11 @@ const val DIVISOR = 2
 const val SIZE_ARRAY_OF_FIGURES = 6
 fun main() {
     val figureSupplier = FigureSupplier()
-    val arrayOfFigures: Array<Figure?> = arrayOfNulls(SIZE_ARRAY_OF_FIGURES)
-    for (i in 0 until SIZE_ARRAY_OF_FIGURES) {
-        if (i < SIZE_ARRAY_OF_FIGURES.div(DIVISOR)) arrayOfFigures[i] = figureSupplier.getRandomFigure()
-        else arrayOfFigures[i] = figureSupplier.getDefaultFigure()
+    val arrayOfFigures: Array<Figure> = Array(SIZE_ARRAY_OF_FIGURES) { i ->
+        if (i < SIZE_ARRAY_OF_FIGURES.div(DIVISOR)) figureSupplier.getRandomFigure()
+        else figureSupplier.getDefaultFigure()
     }
-    for (i in 0 until SIZE_ARRAY_OF_FIGURES) arrayOfFigures[i]?.draw()
+    for (figure in arrayOfFigures) {
+        figure.draw()
+    }
 }
