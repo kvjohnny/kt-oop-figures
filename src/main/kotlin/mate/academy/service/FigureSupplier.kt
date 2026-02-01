@@ -13,36 +13,41 @@ const val RANGE = 10
 const val MIN_PARAM = 1
 const val DEFAULT_RADIUS = 10
 const val QUANTITY_OF_NUMBERS = 5
+const val FIRST_CASE = 1
+const val SECOND_CASE = 2
+const val THIRD_CASE = 3
+const val FORTH_CASE = 4
+const val FIRTH_CASE = 5
 
 class FigureSupplier {
     fun getRandomFigure(): Figure? {
         val colorSupplier = ColorSupplier()
         val figure: Figure? = when (Random.nextInt(MIN_PARAM, QUANTITY_OF_NUMBERS)) {
-            1 -> Circle(
+            FIRST_CASE -> Circle(
                 colorSupplier.getRandomColor(),
                 Random.nextInt(MIN_PARAM, RANGE)
             )
 
-            2 -> IsoscelesTrapezoid(
+            SECOND_CASE -> IsoscelesTrapezoid(
                 colorSupplier.getRandomColor(),
                 Random.nextInt(MIN_PARAM, RANGE),
                 Random.nextInt(MIN_PARAM, RANGE),
                 Random.nextInt(MIN_PARAM, RANGE)
             )
 
-            3 -> Rectangle(
-                colorSupplier.getRandomColor(),
-                Random.nextInt(MIN_PARAM, RANGE),
-                Random.nextInt(MIN_PARAM, RANGE)
-            )
-
-            4 -> RightTriangle(
+            THIRD_CASE -> Rectangle(
                 colorSupplier.getRandomColor(),
                 Random.nextInt(MIN_PARAM, RANGE),
                 Random.nextInt(MIN_PARAM, RANGE)
             )
 
-            5 -> Square(
+            FORTH_CASE -> RightTriangle(
+                colorSupplier.getRandomColor(),
+                Random.nextInt(MIN_PARAM, RANGE),
+                Random.nextInt(MIN_PARAM, RANGE)
+            )
+
+            FIRTH_CASE -> Square(
                 colorSupplier.getRandomColor(),
                 Random.nextInt(MIN_PARAM, RANGE)
             )
