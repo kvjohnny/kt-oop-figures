@@ -13,6 +13,6 @@ class Square(color: Color, private val side: Int) : Figure(color) {
     }
 
     override fun calculateArea(): BigDecimal {
-        return BigDecimal(side).times(BigDecimal(side)).setScale(1, RoundingMode.UNNECESSARY)
+        return BigDecimal(side).times(BigDecimal(side)).setScale(1, RoundingMode.HALF_UP)
     }
 }

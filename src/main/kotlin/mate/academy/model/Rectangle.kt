@@ -14,6 +14,6 @@ class Rectangle(color: Color, private val length: Int, private val width: Int) :
     }
 
     override fun calculateArea(): BigDecimal {
-        return BigDecimal(length).times(BigDecimal(width)).setScale(1, RoundingMode.UNNECESSARY)
+        return BigDecimal(length).times(BigDecimal(width)).setScale(1, RoundingMode.HALF_UP)
     }
 }

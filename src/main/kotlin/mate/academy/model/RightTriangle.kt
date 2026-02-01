@@ -19,6 +19,6 @@ class RightTriangle(
 
     override fun calculateArea(): BigDecimal {
         return BigDecimal(firstLeg).times(BigDecimal(secondLeg))
-            .divide(BigDecimal(2), 1, RoundingMode.UNNECESSARY)
+            .divide(BigDecimal(2), 1, RoundingMode.HALF_UP)
     }
 }

@@ -9,13 +9,8 @@ fun main() {
     val figureSupplier = FigureSupplier()
     val arrayOfFigures: Array<Figure?> = arrayOfNulls(SIZE_ARRAY_OF_FIGURES)
     for (i in 0 until SIZE_ARRAY_OF_FIGURES) {
-        if (i < SIZE_ARRAY_OF_FIGURES.div(DIVISOR)) {
-            arrayOfFigures[i] = figureSupplier.getRandomFigure()
-            arrayOfFigures[i]?.draw()
-        }
-        else {
-            arrayOfFigures[i] = figureSupplier.getDefaultFigure()
-            arrayOfFigures[i]?.draw()
-        }
+        if (i < SIZE_ARRAY_OF_FIGURES.div(DIVISOR)) arrayOfFigures[i] = figureSupplier.getRandomFigure()
+        else arrayOfFigures[i] = figureSupplier.getDefaultFigure()
+        arrayOfFigures[i]?.draw()
     }
 }
